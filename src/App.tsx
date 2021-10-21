@@ -1,13 +1,12 @@
-import { Suspense, useState } from 'react';
-import logo from './logo.svg'
-import './App.css'
+import React, { Suspense, useState } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 import { useTranslation } from 'react-i18next';
 
-
 function MyApp() {
   const { t } = useTranslation();
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
@@ -20,7 +19,10 @@ function MyApp() {
           </button>
         </p>
 
-        <p>  {t('Hello')}, you have {count} unread message(s). </p>
+        <p>
+          {' '}
+          {t('Hello')}, you have {count} unread message(s).{' '}
+        </p>
 
         <p>
           Edit <code>/public/locales/*.json</code> and save to test HMR updates.
@@ -44,18 +46,15 @@ function MyApp() {
             Vite Docs
           </a>
         </p>
-
-
       </header>
-
     </div>
-  )
+  );
 }
 
-
-export default function App() {  
-  return (    
-  <Suspense fallback="⏳ loading... ">      
-    <MyApp />    
-  </Suspense>  
-);}
+export default function App() {
+  return (
+    <Suspense fallback="⏳ loading... ">
+      <MyApp />
+    </Suspense>
+  );
+}
