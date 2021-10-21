@@ -6,8 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 function MyApp() {
   const { t } = useTranslation();
-  const [count, setCount] = useState(0);
-
+  const [count, setCount] = useState(0);  
   return (
     <div className="App">
       <header className="App-header">

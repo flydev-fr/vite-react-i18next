@@ -1,3 +1,5 @@
+import React from 'react'
+
 
 export default function CustomHmr() {
     return {
@@ -7,11 +9,8 @@ export default function CustomHmr() {
       handleHotUpdate({ file, server }) {
         if (file.endsWith('.json')) {
           console.log('reloading json file...');
-  
-          server.ws.send({
-            type: 'full-reload',          
-            path: file
-          });
+		  
+          server.ws.send({ type: 'full-reload', path: '*' });
         }
       },
     }
